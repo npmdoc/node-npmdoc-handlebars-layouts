@@ -1,0 +1,122 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/shannonmoeller/handlebars-layouts"
+
+    >handlebars-layouts (v3.1.4)</a>
+</h1>
+<h4>Handlebars helpers which implement layout blocks similar to Jade, Jinja, Nunjucks, Swig, and Twig.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.handlebars-layouts">module handlebars-layouts</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.handlebars-layouts.register">
+            function <span class="apidocSignatureSpan">handlebars-layouts.</span>register
+            <span class="apidocSignatureSpan">(handlebars)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.handlebars-layouts" id="apidoc.module.handlebars-layouts">module handlebars-layouts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.handlebars-layouts.register" id="apidoc.element.handlebars-layouts.register">
+        function <span class="apidocSignatureSpan">handlebars-layouts.</span>register
+        <span class="apidocSignatureSpan">(handlebars)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (handlebars) {
+	var helpers = layouts(handlebars);
+
+	handlebars.registerHelper(helpers);
+
+	return helpers;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var handlebars = require(&#x27;handlebars&#x27;),
+    layouts = require(&#x27;handlebars-layouts&#x27;);
+
+handlebars.registerHelper(layouts(handlebars));
+```
+
+### `layouts.<span class="apidocCodeKeywordSpan">register</span>(handlebars) : Object`
+
+- `handlebars` `Handlebars` - An instance of Handlebars.
+
+Both generates an object containing the layout helpers and registers them with Handlebars automatically.
+
+```js
+var handlebars = require(&#x27;handlebars&#x27;),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
