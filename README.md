@@ -1,9 +1,14 @@
-# api documentation for  [handlebars-layouts (v3.1.4)](https://github.com/shannonmoeller/handlebars-layouts)  [![npm package](https://img.shields.io/npm/v/npmdoc-handlebars-layouts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-handlebars-layouts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts)
+# npmdoc-handlebars-layouts
+
+#### api documentation for  [handlebars-layouts (v3.1.4)](https://github.com/shannonmoeller/handlebars-layouts)  [![npm package](https://img.shields.io/npm/v/npmdoc-handlebars-layouts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-handlebars-layouts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts)
+
 #### Handlebars helpers which implement layout blocks similar to Jade, Jinja, Nunjucks, Swig, and Twig.
 
-[![NPM](https://nodei.co/npm/handlebars-layouts.png?downloads=true)](https://www.npmjs.com/package/handlebars-layouts)
+[![NPM](https://nodei.co/npm/handlebars-layouts.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/handlebars-layouts)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-handlebars-layouts/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-handlebars-layouts_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-handlebars-layouts/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-handlebars-layouts/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-handlebars-layouts/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-handlebars-layouts/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-handlebars-layouts/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-handlebars-layouts/build/screenCapture.npmPackageListing.svg)
 
@@ -16,16 +21,39 @@
 ```json
 
 {
-    "author": {
-        "name": "Shannon Moeller",
-        "email": "me@shannonmoeller.com",
-        "url": "http://shannonmoeller.com"
-    },
-    "bugs": {
-        "url": "https://github.com/shannonmoeller/handlebars-layouts/issues"
-    },
-    "dependencies": {},
+    "name": "handlebars-layouts",
+    "version": "3.1.4",
     "description": "Handlebars helpers which implement layout blocks similar to Jade, Jinja, Nunjucks, Swig, and Twig.",
+    "keywords": [
+        "blocks",
+        "dust",
+        "express",
+        "handlebars",
+        "hbs",
+        "jade",
+        "layout",
+        "mote",
+        "mustache",
+        "nunjucks",
+        "swig",
+        "twig"
+    ],
+    "homepage": "https://github.com/shannonmoeller/handlebars-layouts",
+    "bugs": "https://github.com/shannonmoeller/handlebars-layouts/issues",
+    "license": "MIT",
+    "author": "Shannon Moeller <me@shannonmoeller.com> (http://shannonmoeller.com)",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/shannonmoeller/handlebars-layouts.git"
+    },
+    "scripts": {
+        "gulp": "gulp",
+        "prepublish": "gulp build",
+        "report": "cat ./coverage/lcov.info | coveralls",
+        "test": "gulp test",
+        "zuul": "zuul --local -- test/handlebars-layouts.spec.js"
+    },
     "devDependencies": {
         "babel-eslint": "^4.1.1",
         "browserify": "^10.2.4",
@@ -45,97 +73,11 @@
         "vinyl-source-stream": "^1.1.0",
         "zuul": "^3.0.0"
     },
-    "directories": {},
-    "dist": {
-        "shasum": "26b3beb931b4b877dfbf7e6feaf4058ee6228b02",
-        "tarball": "https://registry.npmjs.org/handlebars-layouts/-/handlebars-layouts-3.1.4.tgz"
-    },
     "engines": {
         "node": ">= 0.10"
     },
-    "gitHead": "37a74b261a38db18d7f7be4613e5cdf252f95e03",
-    "homepage": "https://github.com/shannonmoeller/handlebars-layouts",
-    "keywords": [
-        "blocks",
-        "dust",
-        "express",
-        "handlebars",
-        "hbs",
-        "jade",
-        "layout",
-        "mote",
-        "mustache",
-        "nunjucks",
-        "swig",
-        "twig"
-    ],
-    "license": "MIT",
-    "main": "index.js",
-    "maintainers": [
-        {
-            "name": "shannonmoeller",
-            "email": "me@shannonmoeller.com"
-        }
-    ],
-    "name": "handlebars-layouts",
-    "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/shannonmoeller/handlebars-layouts.git"
-    },
-    "scripts": {
-        "gulp": "gulp",
-        "prepublish": "gulp build",
-        "report": "cat ./coverage/lcov.info | coveralls",
-        "test": "gulp test",
-        "zuul": "zuul --local -- test/handlebars-layouts.spec.js"
-    },
-    "version": "3.1.4"
+    "dependencies": {}
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module handlebars-layouts](#apidoc.module.handlebars-layouts)
-1.  [function <span class="apidocSignatureSpan">handlebars-layouts.</span>register (handlebars)](#apidoc.element.handlebars-layouts.register)
-
-
-
-# <a name="apidoc.module.handlebars-layouts"></a>[module handlebars-layouts](#apidoc.module.handlebars-layouts)
-
-#### <a name="apidoc.element.handlebars-layouts.register"></a>[function <span class="apidocSignatureSpan">handlebars-layouts.</span>register (handlebars)](#apidoc.element.handlebars-layouts.register)
-- description and source-code
-```javascript
-register = function (handlebars) {
-	var helpers = layouts(handlebars);
-
-	handlebars.registerHelper(helpers);
-
-	return helpers;
-}
-```
-- example usage
-```shell
-...
-'''js
-var handlebars = require('handlebars'),
-    layouts = require('handlebars-layouts');
-
-handlebars.registerHelper(layouts(handlebars));
-'''
-
-### 'layouts.register(handlebars) : Object'
-
-- 'handlebars' 'Handlebars' - An instance of Handlebars.
-
-Both generates an object containing the layout helpers and registers them with Handlebars automatically.
-
-'''js
-var handlebars = require('handlebars'),
-...
 ```
 
 
