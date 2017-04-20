@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.handlebars-layouts.handlebars-layouts">
+            function <span class="apidocSignatureSpan"></span>handlebars-layouts
+            <span class="apidocSignatureSpan">(handlebars)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.handlebars-layouts.register">
             function <span class="apidocSignatureSpan">handlebars-layouts.</span>register
             <span class="apidocSignatureSpan">(handlebars)</span>
@@ -76,6 +85,138 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.handlebars-layouts" id="apidoc.module.handlebars-layouts">module handlebars-layouts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.handlebars-layouts.handlebars-layouts" id="apidoc.element.handlebars-layouts.handlebars-layouts">
+        function <span class="apidocSignatureSpan"></span>handlebars-layouts
+        <span class="apidocSignatureSpan">(handlebars)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function layouts(handlebars) {
+	var helpers = {
+		<span class="apidocCodeCommentSpan">/**
+		 * @method extend
+		 * @param {String} name
+		 * @param {?Object} customContext
+		 * @param {Object} options
+		 * @param {Function(Object)} options.fn
+		 * @param {Object} options.hash
+		 * @return {String} Rendered partial.
+		 */
+</span>		extend: function (name, customContext, options) {
+			// Make `customContext` optional
+			if (arguments.length &#x3c; 3) {
+				options = customContext;
+				customContext = null;
+			}
+
+			options = options || {};
+
+			var fn = options.fn || noop,
+				context = mixin({}, this, customContext, options.hash),
+				data = handlebars.createFrame(options.data),
+				template = handlebars.partials[name];
+
+			// Partial template required
+			if (template == null) {
+				throw new Error(&#x27;Missing partial: \&#x27;&#x27; + name + &#x27;\&#x27;&#x27;);
+			}
+
+			// Compile partial, if needed
+			if (typeof template !== &#x27;function&#x27;) {
+				template = handlebars.compile(template);
+			}
+
+			// Add overrides to stack
+			getStack(context).push(fn);
+
+			// Render partial
+			return template(context, { data: data });
+		},
+
+		/**
+		 * @method embed
+		 * @param {String} name
+		 * @param {?Object} customContext
+		 * @param {Object} options
+		 * @param {Function(Object)} options.fn
+		 * @param {Object} options.hash
+		 * @return {String} Rendered partial.
+		 */
+		embed: function () {
+			var context = mixin({}, this || {});
+
+			// Reset context
+			context.$$layoutStack = null;
+			context.$$layoutActions = null;
+
+			// Extend
+			return helpers.extend.apply(context, arguments);
+		},
+
+		/**
+		 * @method block
+		 * @param {String} name
+		 * @param {Object} options
+		 * @param {Function(Object)} options.fn
+		 * @return {String} Modified block content.
+		 */
+		block: function (name, options) {
+			options = options || {};
+
+			var fn = options.fn || noop,
+				data = handlebars.createFrame(options.data),
+				context = this || {};
+
+			applyStack(context);
+
+			return getActionsByName(context, name).reduce(
+				applyAction.bind(context),
+				fn(context, { data: data })
+			);
+		},
+
+		/**
+		 * @method content
+		 * @param {String} name
+		 * @param {Object} options
+		 * @param {Function(Object)} options.fn
+		 * @param {Object} options.hash
+		 * @param {String} options.hash.mode
+		 * @return {String} Always empty.
+		 */
+		content: function (name, options) {
+			options = options || {};
+
+			var fn = options.fn,
+				data = handlebars.createFrame(options.data),
+				hash = options.hash || {},
+				mode = hash.mode || &#x27;replace&#x27;,
+				context = this || {};
+
+			applyStack(context);
+
+			// Getter
+			if (!fn) {
+				return name in getActions(context);
+			}
+
+			// Setter
+			getActionsByName(context, name).push({
+				options: { data: data },
+				mode: mode.toLowerCase(),
+				fn: fn
+			});
+		}
+	};
+
+	return helpers;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>

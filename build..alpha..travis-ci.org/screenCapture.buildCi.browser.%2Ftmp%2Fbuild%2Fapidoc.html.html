@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/shannonmoeller/handlebars-layouts"
-
-    >handlebars-layouts (v3.1.4)</a>
+    <a href="https://github.com/shannonmoeller/handlebars-layouts">handlebars-layouts (v3.1.4)</a>
 </h1>
 <h4>Handlebars helpers which implement layout blocks similar to Jade, Jinja, Nunjucks, Swig, and Twig.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.handlebars-layouts">module handlebars-layouts</a><ol>
 
@@ -107,7 +100,7 @@
 		 */
 </span>		extend: function (name, customContext, options) {
 			// Make `customContext` optional
-			if (arguments.length &#x3c; 3) {
+			if (arguments.length &lt; 3) {
 				options = customContext;
 				customContext = null;
 			}
@@ -121,11 +114,11 @@
 
 			// Partial template required
 			if (template == null) {
-				throw new Error(&#x27;Missing partial: \&#x27;&#x27; + name + &#x27;\&#x27;&#x27;);
+				throw new Error('Missing partial: \'' + name + '\'');
 			}
 
 			// Compile partial, if needed
-			if (typeof template !== &#x27;function&#x27;) {
+			if (typeof template !== 'function') {
 				template = handlebars.compile(template);
 			}
 
@@ -193,7 +186,7 @@
 			var fn = options.fn,
 				data = handlebars.createFrame(options.data),
 				hash = options.hash || {},
-				mode = hash.mode || &#x27;replace&#x27;,
+				mode = hash.mode || 'replace',
 				context = this || {};
 
 			applyStack(context);
@@ -235,8 +228,8 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 ```js
-var handlebars = require(&#x27;handlebars&#x27;),
-    layouts = require(&#x27;handlebars-layouts&#x27;);
+var handlebars = require('handlebars'),
+    layouts = require('handlebars-layouts');
 
 handlebars.registerHelper(layouts(handlebars));
 ```
@@ -248,7 +241,7 @@ handlebars.registerHelper(layouts(handlebars));
 Both generates an object containing the layout helpers and registers them with Handlebars automatically.
 
 ```js
-var handlebars = require(&#x27;handlebars&#x27;),
+var handlebars = require('handlebars'),
 ...</pre></li>
     </ul>
 
@@ -261,3 +254,4 @@ var handlebars = require(&#x27;handlebars&#x27;),
     ]
 </div>
 </div>
+</body></html>
