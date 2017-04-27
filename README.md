@@ -1,6 +1,6 @@
 # npmdoc-handlebars-layouts
 
-#### api documentation for  [handlebars-layouts (v3.1.4)](https://github.com/shannonmoeller/handlebars-layouts)  [![npm package](https://img.shields.io/npm/v/npmdoc-handlebars-layouts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-handlebars-layouts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts)
+#### basic api documentation for  [handlebars-layouts (v3.1.4)](https://github.com/shannonmoeller/handlebars-layouts)  [![npm package](https://img.shields.io/npm/v/npmdoc-handlebars-layouts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-handlebars-layouts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-handlebars-layouts)
 
 #### Handlebars helpers which implement layout blocks similar to Jade, Jinja, Nunjucks, Swig, and Twig.
 
@@ -21,39 +21,15 @@
 ```json
 
 {
-    "name": "handlebars-layouts",
-    "version": "3.1.4",
+    "author": {
+        "name": "Shannon Moeller",
+        "url": "http://shannonmoeller.com"
+    },
+    "bugs": {
+        "url": "https://github.com/shannonmoeller/handlebars-layouts/issues"
+    },
+    "dependencies": {},
     "description": "Handlebars helpers which implement layout blocks similar to Jade, Jinja, Nunjucks, Swig, and Twig.",
-    "keywords": [
-        "blocks",
-        "dust",
-        "express",
-        "handlebars",
-        "hbs",
-        "jade",
-        "layout",
-        "mote",
-        "mustache",
-        "nunjucks",
-        "swig",
-        "twig"
-    ],
-    "homepage": "https://github.com/shannonmoeller/handlebars-layouts",
-    "bugs": "https://github.com/shannonmoeller/handlebars-layouts/issues",
-    "license": "MIT",
-    "author": "Shannon Moeller <me@shannonmoeller.com> (http://shannonmoeller.com)",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/shannonmoeller/handlebars-layouts.git"
-    },
-    "scripts": {
-        "gulp": "gulp",
-        "prepublish": "gulp build",
-        "report": "cat ./coverage/lcov.info | coveralls",
-        "test": "gulp test",
-        "zuul": "zuul --local -- test/handlebars-layouts.spec.js"
-    },
     "devDependencies": {
         "babel-eslint": "^4.1.1",
         "browserify": "^10.2.4",
@@ -73,10 +49,52 @@
         "vinyl-source-stream": "^1.1.0",
         "zuul": "^3.0.0"
     },
+    "directories": {},
+    "dist": {
+        "shasum": "26b3beb931b4b877dfbf7e6feaf4058ee6228b02",
+        "tarball": "https://registry.npmjs.org/handlebars-layouts/-/handlebars-layouts-3.1.4.tgz"
+    },
     "engines": {
         "node": ">= 0.10"
     },
-    "dependencies": {}
+    "gitHead": "37a74b261a38db18d7f7be4613e5cdf252f95e03",
+    "homepage": "https://github.com/shannonmoeller/handlebars-layouts",
+    "keywords": [
+        "blocks",
+        "dust",
+        "express",
+        "handlebars",
+        "hbs",
+        "jade",
+        "layout",
+        "mote",
+        "mustache",
+        "nunjucks",
+        "swig",
+        "twig"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "maintainers": [
+        {
+            "name": "shannonmoeller"
+        }
+    ],
+    "name": "handlebars-layouts",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shannonmoeller/handlebars-layouts.git"
+    },
+    "scripts": {
+        "gulp": "gulp",
+        "prepublish": "gulp build",
+        "report": "cat ./coverage/lcov.info | coveralls",
+        "test": "gulp test",
+        "zuul": "zuul --local -- test/handlebars-layouts.spec.js"
+    },
+    "version": "3.1.4",
+    "bin": {}
 }
 ```
 
